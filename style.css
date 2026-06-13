@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
-    --primary:#0938a5;
-    --secondary:#063343;
-    --accent:#00C389;
-    --dark:#0F172A;
-    --light:#F8FAFC;
-    --text:#1E293B;
+    --primary:#0056D2;     /* Corporate Blue */
+    --secondary:#00A3E0;   /* Sky Blue */
+    --accent:#00C389;      /* Success Green */
+    --dark:#0B1F33;        /* Dark Navy */
+    --light:#F8FAFC;       /* White */
+    --text:#1E293B;        /* Dark Gray */
 }
+.hero h1{
+    color:white;
+    text-shadow:0 4px 20px rgba(0,0,0,.5);
+    background:none;
+    -webkit-text-fill-color:white;
+}
+
 
 *{
     margin:0;
@@ -277,7 +284,7 @@ section h2{
 }
 
 .project-box p{
-    color:#64748b;
+    color:#249909;
 }
 
 /* PRICING */
@@ -319,6 +326,64 @@ section h2{
     border-left:5px solid var(--primary);
     border-radius:10px;
     box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+/* CONTACT FORM */
+
+form{
+    max-width:700px;
+    margin:30px auto;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+
+    justify-content:center;
+}
+
+form input,
+form textarea{
+    padding:15px;
+
+    border:none;
+    border-radius:10px;
+
+    background:white;
+
+    font-size:16px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.1);
+}
+
+form input{
+    width:300px;
+}
+
+form textarea{
+    width:620px;
+    height:120px;
+    resize:none;
+}
+
+form button{
+    background:#0056D2;
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:600;
+}
+
+form button:hover{
+    background:#003E9F;
 }
 
 /* CONTACT */
@@ -424,3 +489,98 @@ footer{
 .service-link .service-box{
     height:100%;
 }
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:999;
+}
+
+.whatsapp img{
+    width:60px;
+    height:60px;
+    border-radius:30%;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:0.3s;
+}
+
+.whatsapp img:hover{
+    transform:scale(1.1);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+/* STUDENT LOGIN */
+
+.login-box{
+    width:380px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    margin:100px auto;
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+.login-box h2{
+    margin-bottom:20px;
+    color:#0fc7a5;
+}
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+
+    background:#0fc7a5;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.dashboard{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    padding:50px;
+}
+
+.dashboard-home{
+    text-align:center;
+    margin:25px 0;
+}
+nav ul li a{
+    color: #e8d6d6;
+    font-size:15px;
+}
+
